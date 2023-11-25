@@ -1,45 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 20px;
 }
-.header, .footer {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-.main-content {
-    min-height: 400px;
-    margin-top: 20px;
-}
-.calendar, .reminders {
-    width: 48%;
-    float: left;
-    margin: 1%;
+.countdown, .holidays {
+    flex-basis: 45%;
     background: #fff;
     padding: 20px;
-    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.calendar table {
-    width: 100%;
-    border-collapse: collapse;
+h2 {
+    color: #d2691e;
 }
-.calendar th, .calendar td {
-    border: 1px solid #ddd;
-    padding: 10px;
+.footer {
     text-align: center;
-}
-.calendar th {
-    background: #333;
-    color: #fff;
-}
-.reminder-form, .upcoming-holidays {
     margin-top: 20px;
 }
+
+.firework {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}
+
