@@ -14,13 +14,19 @@ const holidays = [
 function displayHolidays() {
     const today = new Date();
     let htmlContent = '';
-    for (const holiday of holidays) {
+    for (let i = 0; i < holidays.length; i++) {
+        const holiday = holidays[i];
         const holidayDate = new Date(holiday.date);
         const timeDiff = holidayDate - today;
         const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-        htmlContent += '<li>' + holiday.name + ': ' + daysLeft + ' days left</li>';
+        htmlContent += '<li>' + holiday.name + ': ' + daysLeft + ' days left <button onclick="deleteHoliday(' + i + ')">Delete</button></li>';
     }
     document.getElementById('holidayList').innerHTML = htmlContent;
+}
+
+function deleteHoliday(index) {
+    holidays.splice(index, 1);
+    displayHolidays();
 }
 
 function addHoliday() {
